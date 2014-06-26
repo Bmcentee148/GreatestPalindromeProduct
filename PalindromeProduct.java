@@ -9,7 +9,7 @@ class PalindromeProduct{
 		/*System.out.println(isPalindrome(2120212));
 		System.out.println(isPalindrome(5));
 		System.out.println(isPalindrome(300020));*/
-
+		System.out.println(CalcGreatestPalindrome());
 
 
 	}
@@ -28,7 +28,7 @@ class PalindromeProduct{
 		for(int i = START; i <= MAX; i ++){
 			for(int j = i; j <= MAX; j++){
 				product = i * j;
-				if(isPalindrome(product)) greatest = product;
+				if(isPalindrome(product) && product > greatest) greatest = product;
 			}
 		}
 		return greatest;
